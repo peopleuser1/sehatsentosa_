@@ -1,0 +1,142 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #f2e1d6, #d2b1a3);
+    background-image: url('WhatsApp Image 2024-12-18 at 21.11.34.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #4a3221;
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh; /* Ensure the body covers the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    max-width: 450px; /* Default size for larger screens */
+    width: 90%; /* Ensure it adjusts on smaller screens */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #8e8b7b;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 10px 10px 20px rgba(239, 234, 234, 0.852), -6px -6px 12px rgba(249, 246, 246, 0.73);
+    transform: translateY(-8px);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(171, 162, 162, 0.874);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Button */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.button {
+    background: linear-gradient(to bottom, #f9f5eb, #e0d1b1);
+    color: #776c63;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), -2px -2px 4px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #f5e5cb, #d3b792);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5), -6px -6px 10px rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.button:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -2px -2px 4px rgba(255, 255, 255, 0.1);
+    transform: translateY(1px);
+}
+
+/* Ripple Effect */
+.ripple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    z-index: 1;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%; /* Adjust container size for smaller screens */
+        padding: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        padding: 10px; /* Further reduce padding for very small screens */
+    }
+
+    .button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
